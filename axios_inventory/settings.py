@@ -31,8 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'jet.dashboard',
-    'jet',
+   'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -142,6 +141,28 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 JAZZMIN_SETTINGS = {
     "site_header": "Axios Inventory",
+    "copyright": "Jahid Hasan",
 
-    "custom_css": "css/custom.css",
+     "topmenu_links": [
+
+        # Url that gets reversed (Permissions can be added)
+        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+
+        # external url that opens in a new window (Permissions can be added)
+        {"name": "Inventory", "url": "http://127.0.0.1:8000/app_inventory/inventory/", "new_window": True},
+
+        
+        {"name": "Add New Product", "url": "http://127.0.0.1:8000/app_inventory/product/", "new_window": True},
+
+        {"name": "Sales", "url": "http://127.0.0.1:8000/app_inventory/sales/", "new_window": True},
+
+   
+    ]
+  
+}
+
+JAZZMIN_UI_TWEAKS = {
+ 
+   "theme": "united",
+    
 }

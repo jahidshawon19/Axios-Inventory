@@ -24,8 +24,7 @@ admin.site.index_title = 'Inventory Management System'
 
 
 urlpatterns = [
-    path('jet/', include('jet.urls', 'jet')),
-    path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
+    
     path('', admin.site.urls),
 ]
 
